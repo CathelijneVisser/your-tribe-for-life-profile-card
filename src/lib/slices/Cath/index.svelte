@@ -1,5 +1,5 @@
 <script>
-  /** @type {import("@prismicio/client").Content.MemberSlice} */
+  /** @type {import("@prismicio/client").Content.CathSlice} */
   export let slice;
 </script>
 

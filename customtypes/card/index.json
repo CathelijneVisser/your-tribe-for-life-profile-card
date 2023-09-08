@@ -48,7 +48,7 @@
         "fieldset": "Slice Zone",
         "config": {
           "choices": {
-            "member": {
+            "cath": {
               "type": "SharedSlice"
             }
           }

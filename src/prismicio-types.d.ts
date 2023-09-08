@@ -4,7 +4,7 @@ import type * as prismic from "@prismicio/client";
 
 type Simplify<T> = { [KeyType in keyof T]: T[KeyType] };
 
-type CardDocumentDataSlicesSlice = MemberSlice;
+type CardDocumentDataSlicesSlice = CathSlice;
 
 /**
  * Content for Member documents
@@ -185,31 +185,76 @@ export type TribeDocument<Lang extends string = string> =
 export type AllDocumentTypes = CardDocument | SquadDocument | TribeDocument;
 
 /**
- * Default variation for Member Slice
+ * Primary content in *Cath → Primary*
+ */
+export interface CathSliceDefaultPrimary {
+  /**
+   * Name field in *Cath → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: cath.primary.name
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  name: prismic.KeyTextField;
+
+  /**
+   * Age field in *Cath → Primary*
+   *
+   * - **Field Type**: Number
+   * - **Placeholder**: *None*
+   * - **API ID Path**: cath.primary.age
+   * - **Documentation**: https://prismic.io/docs/field#number
+   */
+  age: prismic.NumberField;
+
+  /**
+   * hobbys field in *Cath → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: cath.primary.hobbys
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  hobbys: prismic.RichTextField;
+
+  /**
+   * Picture field in *Cath → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: cath.primary.picture
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  picture: prismic.ImageField<never>;
+}
+
+/**
+ * Default variation for Cath Slice
  *
  * - **API ID**: `default`
  * - **Description**: Default
  * - **Documentation**: https://prismic.io/docs/slice
  */
-export type MemberSliceDefault = prismic.SharedSliceVariation<
+export type CathSliceDefault = prismic.SharedSliceVariation<
   "default",
-  Record<string, never>,
+  Simplify<CathSliceDefaultPrimary>,
   never
 >;
 
 /**
- * Slice variation for *Member*
+ * Slice variation for *Cath*
  */
-type MemberSliceVariation = MemberSliceDefault;
+type CathSliceVariation = CathSliceDefault;
 
 /**
- * Member Shared Slice
+ * Cath Shared Slice
  *
- * - **API ID**: `member`
- * - **Description**: Member
+ * - **API ID**: `cath`
+ * - **Description**: Cath
  * - **Documentation**: https://prismic.io/docs/slice
  */
-export type MemberSlice = prismic.SharedSlice<"member", MemberSliceVariation>;
+export type CathSlice = prismic.SharedSlice<"cath", CathSliceVariation>;
 
 declare module "@prismicio/client" {
   interface CreateClient {
@@ -231,9 +276,10 @@ declare module "@prismicio/client" {
       TribeDocumentData,
       TribeDocumentDataSlicesSlice,
       AllDocumentTypes,
-      MemberSlice,
-      MemberSliceVariation,
-      MemberSliceDefault,
+      CathSlice,
+      CathSliceDefaultPrimary,
+      CathSliceVariation,
+      CathSliceDefault,
     };
   }
 }
