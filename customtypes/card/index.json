@@ -47,11 +47,7 @@
         "type": "Slices",
         "fieldset": "Slice Zone",
         "config": {
-          "choices": {
-            "cath": {
-              "type": "SharedSlice"
-            }
-          }
+          "choices": {}
         }
       }
     },
