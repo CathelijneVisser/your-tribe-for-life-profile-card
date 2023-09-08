@@ -130,7 +130,7 @@ interface SquadDocumentData {
 export type SquadDocument<Lang extends string = string> =
   prismic.PrismicDocumentWithUID<Simplify<SquadDocumentData>, "squad", Lang>;
 
-type TribeDocumentDataSlicesSlice = never;
+type TribeDocumentDataSlicesSlice = SquadSlice;
 
 /**
  * Content for Tribe documents
@@ -256,6 +256,33 @@ type CathSliceVariation = CathSliceDefault;
  */
 export type CathSlice = prismic.SharedSlice<"cath", CathSliceVariation>;
 
+/**
+ * Default variation for Squad Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type SquadSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Record<string, never>,
+  never
+>;
+
+/**
+ * Slice variation for *Squad*
+ */
+type SquadSliceVariation = SquadSliceDefault;
+
+/**
+ * Squad Shared Slice
+ *
+ * - **API ID**: `squad`
+ * - **Description**: Squad
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type SquadSlice = prismic.SharedSlice<"squad", SquadSliceVariation>;
+
 declare module "@prismicio/client" {
   interface CreateClient {
     (
@@ -280,6 +307,9 @@ declare module "@prismicio/client" {
       CathSliceDefaultPrimary,
       CathSliceVariation,
       CathSliceDefault,
+      SquadSlice,
+      SquadSliceVariation,
+      SquadSliceDefault,
     };
   }
 }
