@@ -185,11 +185,11 @@ export type TribeDocument<Lang extends string = string> =
 export type AllDocumentTypes = CardDocument | SquadDocument | TribeDocument;
 
 /**
- * Primary content in *Cath → Primary*
+ * Primary content in *Cathelijne → Primary*
  */
 export interface CathSliceDefaultPrimary {
   /**
-   * Name field in *Cath → Primary*
+   * Name field in *Cathelijne → Primary*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
@@ -199,7 +199,7 @@ export interface CathSliceDefaultPrimary {
   name: prismic.KeyTextField;
 
   /**
-   * Age field in *Cath → Primary*
+   * Age field in *Cathelijne → Primary*
    *
    * - **Field Type**: Number
    * - **Placeholder**: *None*
@@ -209,7 +209,7 @@ export interface CathSliceDefaultPrimary {
   age: prismic.NumberField;
 
   /**
-   * hobbys field in *Cath → Primary*
+   * hobbys field in *Cathelijne → Primary*
    *
    * - **Field Type**: Rich Text
    * - **Placeholder**: *None*
@@ -219,7 +219,7 @@ export interface CathSliceDefaultPrimary {
   hobbys: prismic.RichTextField;
 
   /**
-   * Picture field in *Cath → Primary*
+   * Picture field in *Cathelijne → Primary*
    *
    * - **Field Type**: Image
    * - **Placeholder**: *None*
@@ -230,7 +230,7 @@ export interface CathSliceDefaultPrimary {
 }
 
 /**
- * Default variation for Cath Slice
+ * Default variation for Cathelijne Slice
  *
  * - **API ID**: `default`
  * - **Description**: Default
@@ -243,12 +243,12 @@ export type CathSliceDefault = prismic.SharedSliceVariation<
 >;
 
 /**
- * Slice variation for *Cath*
+ * Slice variation for *Cathelijne*
  */
 type CathSliceVariation = CathSliceDefault;
 
 /**
- * Cath Shared Slice
+ * Cathelijne Shared Slice
  *
  * - **API ID**: `cath`
  * - **Description**: Cath
