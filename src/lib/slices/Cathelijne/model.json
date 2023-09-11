@@ -42,6 +42,14 @@
             "constraint": {},
             "thumbnails": []
           }
+        },
+        "github": {
+          "type": "Link",
+          "config": {
+            "label": "Github",
+            "placeholder": "",
+            "select": "media"
+          }
         }
       },
       "items": {}

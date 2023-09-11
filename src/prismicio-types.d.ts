@@ -4,7 +4,7 @@ import type * as prismic from "@prismicio/client";
 
 type Simplify<T> = { [KeyType in keyof T]: T[KeyType] };
 
-type CardDocumentDataSlicesSlice = CathSlice;
+type CardDocumentDataSlicesSlice = never;
 
 /**
  * Content for Member documents
@@ -53,6 +53,17 @@ interface CardDocumentData {
    * - **Documentation**: https://prismic.io/docs/field#image
    */
   picture: prismic.ImageField<never>;
+
+  /**
+   * Github field in *Member*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: card.github
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  github: prismic.LinkField;
 
   /**
    * Slice Zone field in *Member*
@@ -227,6 +238,16 @@ export interface CathSliceDefaultPrimary {
    * - **Documentation**: https://prismic.io/docs/field#image
    */
   picture: prismic.ImageField<never>;
+
+  /**
+   * Github field in *Cathelijne → Primary*
+   *
+   * - **Field Type**: Link to Media
+   * - **Placeholder**: *None*
+   * - **API ID Path**: cath.primary.github
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  github: prismic.LinkToMediaField;
 }
 
 /**

@@ -17,14 +17,14 @@
 <section>
     <p>Hoi Ik ben Cathelijne, ik ben 
       {data.slices[0].primary.age} jaar.
+      Mijn hobby's zijn:
+      {data.slices[0].primary.hobbys[0].text}.
+  
     </p>
 </section>
  
 <section>
-  <p>
-    Mijn hobby's zijn:
-    {data.slices[0].primary.hobbys[0].text}.
-
+  <p>Mijn github is: {data.slices[0].primary.github.url}.
   </p>
   </section>
 
