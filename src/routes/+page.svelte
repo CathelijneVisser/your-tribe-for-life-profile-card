@@ -15,12 +15,18 @@
 </section>
 
 <section>
-    <p>{data.slices[0].primary.age}</p>
+    <p>Hoi Ik ben Cathelijne, ik ben 
+      {data.slices[0].primary.age} jaar.
+    </p>
 </section>
  
 <section>
-    {data.slices[0].primary.hobbys[0].text}
-</section>
+  <p>
+    Mijn hobby's zijn:
+    {data.slices[0].primary.hobbys[0].text}.
+
+  </p>
+  </section>
 
   <!-- <pre>
 {JSON.stringify(data, null, 2)}
@@ -45,5 +51,19 @@
         margin: 1em;
     }
 
+    section:first-of-type {
+      display: flex;
+      flex-direction: column;
 
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 1em;
+    }
+
+    img {
+      width: 5em;
+      margin-top: 1em;
+    }
 </style>
