@@ -4,7 +4,7 @@ import config from "../../slicemachine.config.json";
 /**
  * The project's Prismic repository name.
  */
-export const repositoryName =  config.repositoryName;
+export const repositoryName = config.repositoryName;
 
 /**
  * A list of Route Resolver objects that define how a document's `url` field is resolved.
@@ -20,10 +20,6 @@ const routes = [
     uid: "cathelijnevisser",
     path: "/",
   },
-  // {
-  //   type: "page",
-  //   path: "/:uid",
-  // },
 ];
 
 /**
