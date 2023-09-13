@@ -66,6 +66,17 @@ interface CardDocumentData {
   github: prismic.LinkField;
 
   /**
+   * Linkedin field in *Member*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: card.linkdin
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  linkdin: prismic.LinkField;
+
+  /**
    * Slice Zone field in *Member*
    *
    * - **Field Type**: Slice Zone

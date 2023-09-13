@@ -51,6 +51,15 @@
           "select": null
         }
       },
+      "linkdin": {
+        "type": "Link",
+        "config": {
+          "label": "Linkedin",
+          "placeholder": "",
+          "allowTargetBlank": false,
+          "select": null
+        }
+      },
       "slices": {
         "type": "Slices",
         "fieldset": "Slice Zone",

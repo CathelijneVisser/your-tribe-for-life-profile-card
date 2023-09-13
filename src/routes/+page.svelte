@@ -19,7 +19,9 @@
 </section>
 
 <section>
-  <a href={data.github.url}>github</a>
+  <a href={data.github.url}>Mijn github kun je hier vinden.</a>
+  <a href={data.linkdin.url}>Mijn linkedin kun je hier vinden.</a>
+
 </section>
 
 <SliceZone slices={data.slices} {components} />
