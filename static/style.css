@@ -13,16 +13,14 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    height: 100vh;
 }
 
 section {
-    /* border: 2px solid black; */
     width: 10em;
     height: 10em;
     padding: 1em;
     margin: 1em;
-    /* margin-top: 60vh; */
+    margin-top: 60vh;
     background-color: white;
     border-radius: 1em;
 }
@@ -54,5 +52,10 @@ pre {
         align-items: center;
         justify-content: center;
         background-image: url(BackgroundPc.jpg);
+        height: 100vh;
+    }
+
+    section{
+        margin: 1em;
     }
 }
