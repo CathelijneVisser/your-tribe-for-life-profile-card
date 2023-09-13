@@ -70,11 +70,22 @@ interface CardDocumentData {
    *
    * - **Field Type**: Link
    * - **Placeholder**: *None*
-   * - **API ID Path**: card.linkdin
+   * - **API ID Path**: card.linkedin
    * - **Tab**: Main
    * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
    */
-  linkdin: prismic.LinkField;
+  linkedin: prismic.LinkField;
+
+  /**
+   * Email field in *Member*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: card.email
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  email: prismic.RichTextField;
 
   /**
    * Slice Zone field in *Member*

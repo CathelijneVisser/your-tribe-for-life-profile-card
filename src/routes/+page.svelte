@@ -20,7 +20,8 @@
 
 <section>
   <a href={data.github.url}>Mijn github kun je hier vinden.</a>
-  <a href={data.linkdin.url}>Mijn linkedin kun je hier vinden.</a>
+  <a href={data.linkedin.url}>Mijn linkedin kun je hier vinden.</a>
+  <p>Mijn email adress is {data.email[0].text}</p>
 
 </section>
 
