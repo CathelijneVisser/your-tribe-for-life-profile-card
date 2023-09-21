@@ -29,6 +29,8 @@ Om (verder) te kunnen werken aan dit project, moet je de volgende stappen volgen
 <ol>
  <li> Clone deze repository
  <li> Open de terminal (CTRL + `)
+ <li> Type ``npm create svelte@latest``
+ <li> Type ``npm create svelte@latest my-app``
  <li> Type ``npm install``
  <li> Type in terminal ``npm run dev``
  <li> Klik link localhost
